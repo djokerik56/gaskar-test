@@ -1,0 +1,19 @@
+header{
+    grid-area: header;
+    background-color: #F9F9FA;
+    a{
+        text-decoration: none;
+        float: right;
+    }
+    .avatar{
+        background-image: url(../img/avatar.svg);
+        border: none;
+        background-image: url(/static/media/avatar.adab92f3.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+}

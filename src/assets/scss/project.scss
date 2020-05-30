@@ -1,0 +1,47 @@
+.project{
+    border: 1px solid;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    &-image{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem;
+        h4{
+            color: #f9f9fa;
+            margin-top: auto;
+            width: 100%;
+        }
+        &__button{
+            display: table;
+            border-radius: 5px;
+            padding: 5px;
+            &-grey{
+                background-color: #f9f9fa;
+                color: #200a48;
+            }
+            &-color{
+                background-color: #6f48b3;
+                color: #f9f9fa;
+            }
+        }
+    }
+    &-inform{
+        padding: 1.5rem 1rem;
+        &__title{
+            padding-bottom: 1rem;
+        }
+        &__text{
+            &:not(:last-child){
+                padding-bottom: .2rem;
+            }
+        }
+        &__image{
+            width: 15px;
+            margin-right: 5px;
+        }
+    }
+}

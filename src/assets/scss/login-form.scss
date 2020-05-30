@@ -1,0 +1,22 @@
+.login-block{
+    max-width: 450px;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    margin: 5rem auto;
+    box-sizing: border-box;
+    .img-logo{
+        max-width: 200px;
+        position: absolute;
+    }
+    .login-form{
+        display: table;
+        margin: 6rem auto;
+        max-width: 290px;
+        width: 100%;
+        input{
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}

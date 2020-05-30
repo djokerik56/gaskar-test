@@ -1,0 +1,27 @@
+.navbar{
+    grid-area: navbar;
+    background-color: #37186E;
+    &__link{
+        display: block;
+        padding: 1rem;
+        color: #FFF;
+        text-decoration: none;
+        border-left: 10px solid #37186E;
+        &:before{
+            content: "";
+            display: inline-block;
+            margin-right: 0.7rem;
+            height: 12px;
+            width: 12px;
+            background-image: url(../img/li.svg);
+        }
+        &_active{
+            background-color: #200A48;
+            border-left:10px solid #B331CB;
+            
+        }
+    }
+    a{
+        
+    }
+}
