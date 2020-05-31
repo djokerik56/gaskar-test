@@ -1,21 +1,15 @@
-import React from 'react';
-import './App.scss';
-import { Route, withRouter } from 'react-router-dom';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import Login from './components/Login';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects/Projects';
+import React from 'react'
+import './App.scss'
+import { Route, withRouter } from 'react-router-dom'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
+import Login from './components/Login'
+import Content from './components/Content'
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Navbar/>
-      <main>
-        <Route path='/projects' render={() => <Projects/>}/>
-      </main>
+      <Content />
       <Route path='/login' render={() => <Login />} />
     </div>
   );
@@ -23,6 +17,6 @@ function App() {
 
 export default compose(
   withRouter,
-  connect(null,{
-
-  }))(App);
+  connect(null, {
+    
+  }))(App)

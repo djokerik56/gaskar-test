@@ -1,13 +1,13 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { Input, renderDateTimePicker } from '../common/FormControls'
+import { Input } from '../common/FormControls'
 import { required } from '../common/Validators'
 
 let ProjectsPostForm = (props) => {
     return (
         <div className="container">
-            <form className='form' onSubmit={props.handleSubmit}>
-                <div className="form__group">
+            <form className='form projects-form' onSubmit={props.handleSubmit}>
+                <div className="form__group form projects-form__input">
                     <Field
                         component={Input}
                         type='text'
@@ -16,34 +16,36 @@ let ProjectsPostForm = (props) => {
                         validate={[required]}
                     />
                 </div>
-                <div className="form__group">
+                <div className="form__group projects-form__input">
                     <Field
                         component={Input}
                         type='text'
                         name='title'
-                        placeholder='Название'
+                        placeholder='Название проекта'
                         validate={[required]}
                     />
                 </div>
-                <div className="form__group">
+                <div className="form__group projects-form__input">
                     <Field
                         component={Input}
-                        type='text'
+                        type='url'
                         name='image'
                         placeholder='Image URL'
                     />
                 </div>
-                <div className="form__group">
+                <div className="form__group projects-form__date">
                     <Field
-                        component={renderDateTimePicker}
+                        component={Input}
+                        type='date'
                         name='dateStart'
                     />
                     <Field
-                        component={renderDateTimePicker}
+                        component={Input}
+                        type='date'
                         name='dateEnd'
                     />
                 </div>
-                <div className="form__group">
+                <div className="form__group projects-form__input">
                     <Field
                         component={Input}
                         type='text'
@@ -52,7 +54,7 @@ let ProjectsPostForm = (props) => {
                         validate={[required]}
                     />
                 </div>
-                <div className="form__group">
+                <div className="form__group projects-form__input">
                     <Field
                         component={Input}
                         type='text'
@@ -61,7 +63,9 @@ let ProjectsPostForm = (props) => {
                         validate={[required]}
                     />
                 </div>
-                <button>push</button>
+                <button className='button-color'>
+                    Добавить проект
+                </button>
             </form>
 
         </div>

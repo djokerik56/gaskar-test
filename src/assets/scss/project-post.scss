@@ -1,7 +1,9 @@
 .project{
-    border: 1px solid;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
     &-image{
         background-position: center center;
         background-repeat: no-repeat;

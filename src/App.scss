@@ -1,34 +1,21 @@
+//RESET
 @import './assets/scss/reset.scss';
+
+//FORM
 @import './assets/scss/login-form';
+@import './assets/scss/project-form';
 @import './assets/scss/form';
+
+//REACT COMPONENT
 @import './assets/scss/navbar';
 @import './assets/scss/header';
 @import './assets/scss/projects';
-@import './assets/scss/project';
+@import './assets/scss/project-post';
+
+//GLOBAL STYLE
+@import './assets/scss/global';
+@import './assets/scss/grid';
+@import './assets/scss/button';
+
+//FONTS
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-.App{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    display: grid;
-    grid-template-areas:
-    'navbar header header'
-    'navbar main main';
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 60px 1fr;
-}
-h1{
-  font-size: 2.25rem;
-} 
-h2{
-  font-size: 1.6rem;
-} 
-h3{
-  font-size: 1.35rem;
-}
-
-main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-area: main;
-}

@@ -44,7 +44,7 @@ let LoginForm = (props) => {
                     {props.error && <span className='error'>
                         {props.error}
                     </span>}
-                    <button className='form__button'>
+                    <button className='form__button button-color'>
                         Войти
                     </button>
                 </form>

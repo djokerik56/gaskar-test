@@ -1,0 +1,56 @@
+main{
+    grid-area: main;
+}
+.navbar{
+    grid-area: navbar;
+}
+header{
+    grid-area: header;
+}
+
+.App-wrapper{
+    @media (min-width: 320px){
+        display: grid;
+        grid-template-areas:
+        'header'
+        'main';
+        grid-template-rows: 75px 1fr;
+        header{
+            display: flex;
+        }
+        .navbar{
+            position: fixed;
+            width: 100%;
+            left: -100%;
+            top:0;
+            ul{
+                margin-top: 90px;
+            }
+        }
+    }
+    @media (min-width: 768px){
+        grid-template-areas:
+        'navbar header header'
+        'navbar main main';
+        grid-template-columns: .7fr repeat(2, 1fr);
+        header{
+            display: block;
+        }
+        .navbar{
+            position: static;
+            ul{
+                margin-top: 0;
+            }
+        }
+        .projects-body {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 1024px){
+        grid-template-columns: .5fr repeat(2, 1fr);
+        .projects-body {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+}

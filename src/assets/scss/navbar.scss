@@ -1,6 +1,6 @@
 .navbar{
-    grid-area: navbar;
     background-color: #37186E;
+    min-height: 100vh;
     &__link{
         display: block;
         padding: 1rem;
@@ -21,7 +21,8 @@
             
         }
     }
-    a{
-        
-    }
+}
+
+.navbar-active{
+    left: 0 !important;
 }

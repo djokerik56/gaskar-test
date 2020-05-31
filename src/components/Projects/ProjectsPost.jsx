@@ -37,7 +37,7 @@ const ProjectsPost = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    project: state.project.project
+    project: state.projectReducer.projects
 })
 
 export default connect(mapStateToProps)(ProjectsPost)

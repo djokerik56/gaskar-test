@@ -4,8 +4,11 @@
     }
     &__checkbox-group{
         margin: .5rem 0;
-        display: flex;
-        align-items: center;
+        label{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
     }
     &__text{
         display: block;
@@ -15,20 +18,17 @@
     }
     &__button{
         width: 100%;
-        background-color: #B331CB;
-        color: #FFF;
-        border: 1px solid #CACCCF;
-        padding: .5rem;
     }
     .error{
         color: red;
         display: block;
-        margin-top: .5rem;
+        margin: 1rem 0;
     }
     input{
         padding: .5rem;
         border: 1px solid #CACCCF;
         color: #53575B;
+        box-sizing: border-box;
         &::placeholder{
             color: #CACCCF;
         }
@@ -54,9 +54,6 @@
             content: "\2713";
             text-align: center;
         }
-    }
-    label {
-        cursor: pointer;
     }
 
 }

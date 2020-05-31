@@ -1,5 +1,9 @@
+import {reset} from 'redux-form';
+
+const ADD_PROJECTS_POST = 'ADD_PROJECTS_POST'
+
 let initialState = {
-    project: [
+    projects: [
         {
             company: 'Hadassah Medical',
             title: 'Терапевтический корпус',
@@ -18,8 +22,40 @@ let initialState = {
 }
 
 const projectReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
+        case ADD_PROJECTS_POST:
+            return {
+                ...state,
+                projects: [...state.projects, action.postBody]
+            }
         default: return state
+    }
+}
+
+export const addProjectPostCreator = (postBody) =>{
+    return{
+        type: ADD_PROJECTS_POST,
+        postBody: postBody
+    }
+}
+
+export const addProjectPost = (postBody) => {
+    let newPost = {
+        company: postBody.company,
+        title: postBody.title,
+        image: postBody.image,
+        classification: 'Медецина',
+        status: 'Строится',
+        date: {
+            start: postBody.dateStart.split('-').reverse().join("."),
+            end: postBody.dateEnd.split('-').reverse().join(".")
+        },
+        lead: postBody.lead,
+        administrator: postBody.administrator
+    }
+    return (dispatch) => {
+        dispatch(addProjectPostCreator(newPost))
+        dispatch(reset('projectsPostForm'))
     }
 }
 

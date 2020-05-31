@@ -1,20 +1,37 @@
 import React from 'react'
-import Popup from "reactjs-popup";
+import Popup from "reactjs-popup"
 import ProjectsPostForm from '../Form/ProjectsPostForm'
+import { connect } from 'react-redux'
+import { addProjectPost } from '../../redux/project-reducer'
+import closeImage from '../../assets/img/close-color.svg'
 
-const ModalProjectsPost = () => {
+const ModalProjectsPost = (props) => {
+
     let onAddProjectsPost = (values) => {
-        console.log(values)
+        props.addProjectPost(values)
     }
+
     return (
         <Popup
-            trigger={<button className="button"> Добавить проект </button>}
+            trigger={<button className="button button-color"> Добавить проект </button>}
             modal
             closeOnDocumentClick
+            contentStyle={{ minWidth: '290px' }}
         >
-            <ProjectsPostForm onSubmit={onAddProjectsPost} />
-      </Popup>
+            {close => (
+                <>
+                    <button
+                        className="button button-modal-close"
+                        onClick={() => close()}
+                    >
+                        <img src={closeImage} alt="closeImage" />
+                    </button>
+                    <ProjectsPostForm onSubmit={onAddProjectsPost} />
+                </>
+            )}
+
+        </Popup>
     )
 }
 
-export default ModalProjectsPost
+export default connect(null, { addProjectPost })(ModalProjectsPost)
