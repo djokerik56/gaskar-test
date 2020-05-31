@@ -15,6 +15,7 @@
             width: 12px;
             background-image: url(../img/li.svg);
         }
+        &:hover,
         &_active{
             background-color: #200A48;
             border-left:10px solid #B331CB;
